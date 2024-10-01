@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#app {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    text-align: center;
+}
+
+a {
+    color:rgb(23, 203, 158);
+    text-decoration: none;
+}
+
+.form__container {
+    display: grid;
+    gap: 0.75rem;
+    place-items: center;
+}
+
+.page__title {
+    font-size: 1.25rem;
+    /* background-color: darkcyan;
+    color: white; */
+}
+
+input[type=email], input[type=password], textarea {
+    border: 0.25px solid grey;
+    border-radius: 0.35rem;
+    padding: 0.5rem;
+}
+
+select {
+    width: 100%;
+    padding: 0.75rem;
+    border-width: 0;
+    border-radius: 0.25rem;
+    background-color: rgb(244, 244, 244);
+}
+
+.submit__button {
+    border: 0px;
+    border-radius: 0.5rem;
+    background-color: darkcyan;
+    padding: 0.5rem 0.75rem;
+    color: white;
+    font-size: 1rem;
+}
+
+textarea {
+    width: 500px;
+    min-height: 20vh;
+    border-width: 0;
+    background-color: rgb(244, 244, 244);
+}
