@@ -2,6 +2,8 @@
 
 This repository contains a PDF extractor app for demonstrating how [ConfigCat](https://configcat.com) and OpenFeature can be used together. In the article, the fictional company, PD-EF Corp, uses feature flags to test newer AI models by releasing them for employees only.
 
+![standard-ai-models](https://github.com/user-attachments/assets/60961326-b271-4da5-bb63-60184b72533b)
+
 ## Build & Run
 
 ### Prerequisites
@@ -35,8 +37,11 @@ npm run dev
 
 6. Sign up with an email ending in `@pf-efcorp.com`, then sign in.
 
+![pro-models](https://github.com/user-attachments/assets/b25593b9-0749-4583-a969-a29a7749a766)
+
 7. Sign up with an email that doesn't end in `@pd-efcorp.com`, then sign in.
 
+![standard-models](https://github.com/user-attachments/assets/dad835dc-5f94-4542-af9b-412f18063f1c)
 
 ## Learn more
 
