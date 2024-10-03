@@ -11,7 +11,8 @@ app.use(cors())
 app.use(express.json());
 
 // create a provider with your SDK key
-const provider = ConfigCatProvider.create(process.env.CONFIGCAT_SDK_KEY);
+// It's recommended to load your key from a .env file
+const provider = ConfigCatProvider.create("YOUR-SDK-KEY");
 
 // initialize the provider
 OpenFeature.setProviderAndWait(provider);

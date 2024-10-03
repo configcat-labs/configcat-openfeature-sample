@@ -1,7 +1,7 @@
 import db from './db.js'
 import { saltandHash } from './hashPassword.js';
 
-// mock authentication - not secure
+// mock authentication server - not for use in production
 
 async function registerUser (req, res) {
     const { email, password } = req.body;
