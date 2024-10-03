@@ -1,6 +1,6 @@
 # PDF Extractor
 
-This repository contains a PDF extractor app used to demonstrate how feature flags. Using a feature flag created with [ConfigCat](https://configcat.com) and the OpenFeature Evaluation API, the fictional company, PD-EF Corp, is testing newer AI models for their employees.
+This repository contains a PDF extractor app for demonstrating how [ConfigCat](https://configcat.com) and OpenFeature can be used together. In the article, the fictional company, PD-EF Corp, uses feature flags to test newer AI models by releasing them for employees only.
 
 ## Build & Run
 
