@@ -49,8 +49,7 @@ async function signOut() {
             </div>
             <label for="prompt">Enter your prompt</label>
             <div>
-                <textarea id="prompt" name="prompt" placeholder="Tell the AI what data you want to extract.">
-                </textarea>
+                <textarea id="prompt" name="prompt" placeholder="Tell the AI what data you want to extract."></textarea>
             </div>
             <div>
                 <select name="models" id="models">

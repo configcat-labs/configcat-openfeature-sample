@@ -1,26 +1,49 @@
-Read.me template:
+# PDF Extractor
 
-# Sample application name and/or blog post title
-
-**(Optional) In case the blog post is already published, please add: [Read the blog post here](https://configcat.com/blog/)**
-
-A few words about the contents of the repository. What is this application about, and what does it demonstrate? Add a backlink to [https://configcat.com](https://configcat.com).
+This repository contains a PDF extractor app used to demonstrate how feature flags. Using a feature flag created with [ConfigCat](https://configcat.com) and the OpenFeature Evaluation API, the fictional company, PD-EF Corp, is testing newer AI models for their employees.
 
 ## Build & Run
 
-Instructions on how to build and run the application locally. A student or junior developer should be able to run the application.
+### Prerequisites
+- Node v18+
+- Basic understanding of Node.js and Express
 
-- Prerequisites
-- Steps, commands to run
+1. Clone the repository:
+    - Click the green "Code" button on the repository's page and copy the URL in the text field.
+    - Paste and run the following in your terminal: `git clone https://github.com/configcat-labs/configcat-openfeature-sample.git`.
+2. Install the dependencies for the backend and frontend:
+```
+cd configcat-openfeature-sample/backend
+npm install
+
+cd configcat-openfeature-sample/frontend
+npm install
+```
+3. Open `/backend/index.js` and enter your ConfigCat SDK key in the `/models` route callback function.
+
+4. Run the backend:
+```
+cd backend
+npm start
+```
+
+5. Run the frontend:
+```
+cd frontend
+npm run dev
+```
+
+6. Sign up with an email ending in `@pf-efcorp.com`, then sign in.
+
+7. Sign up with an email that doesn't end in `@pd-efcorp.com`, then sign in.
+
 
 ## Learn more
 
-Useful links to technical resources.
-
-Example:
-
-- Next.js Documentation - learn about Next.js features.
-- Learn Next.js - an interactive Next.js tutorial.
+- [ConfigCat OpenFeature Provider for Node.js](https://configcat.com/docs/sdk-reference/openfeature/node/) - Read the provider's documentation
+- [ConfigCat OpenFeature Providers](https://configcat.com/docs/sdk-reference/openfeature/overview/) - Check out the available OpenFeature providers.
+- [OpenFeature Server SDK](https://openfeature.dev/docs/reference/technologies/server/javascript/) - Learn more about OpenFeature's Server SDK (Node.js)
+- [OpenFeature](https://openfeature.dev/) - Learn more about OpenFeature
 
 [**ConfigCat**](https://configcat.com) supports many other frameworks and languages. Check out the full list of supported SDKs [here](https://configcat.com/docs/sdk-reference/overview/).
 
@@ -30,7 +53,7 @@ Keep up with ConfigCat on [X](https://x.com/configcat), [Facebook](https://www.f
 
 ## Author
 
-[Your Name](https://github.com/your_name)
+[Zayyad Muhammad Sani](https://github.com/Z-MS)
 
 ## Contributions
 

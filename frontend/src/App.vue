@@ -28,15 +28,11 @@ function logoutUser() {
 <template>
   <div>
     <h1>PDF Extractor</h1>
-    <Dashboard v-if="authenticated"
-     :authenticated="authenticated"
-     @sign-out="logoutUser"/>
-    <div v-else>
-      <Login @authenticated="loginUser"/> 
-    </div>
+      <Dashboard v-if="authenticated"
+      :authenticated="authenticated"
+      @sign-out="logoutUser"/>
+      <div v-else>
+        <Login @authenticated="loginUser"/> 
+      </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>
