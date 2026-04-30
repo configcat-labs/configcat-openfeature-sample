@@ -4,12 +4,12 @@ import { saltandHash } from "./hashPassword.js";
 
 const users = [
     {
-        id: Date.now(),
+        id: 1,
         email: "test@gmail.com",
         password: saltandHash("test")
     },
     {
-        id: Date.now() + 1,
+        id: 2,
         email: "person@email.com",
         password: saltandHash("password")
     }
