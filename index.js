@@ -14,9 +14,7 @@ app.use(
 app.use(express.json());
 
 // Create a provider with your SDK key
-const provider = ConfigCatProvider.create(
-	"configcat-sdk-1/IOjdCIhn9UyK5ZAfJsGYSw/dgb5PW9MBkitvG6IDslNtQ",
-);
+const provider = ConfigCatProvider.create("YOUR-CONFIGCAT-SDK-KEY");
 
 // Initialize the provider
 OpenFeature.setProviderAndWait(provider);
@@ -32,7 +30,7 @@ app.get("/models", async (req, res) => {
 	}
 
 	const context = {
-		targetingKey: 1,
+		targetingKey: 1, // required
 		email: email,
 	};
 	let modelsListEnabled = await client.getBooleanValue(
