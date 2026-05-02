@@ -4,9 +4,9 @@
   },
   "type": "module",
   "dependencies": {
-    "@openfeature/config-cat-provider": "^0.7.1",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
+    "@openfeature/config-cat-provider": "^0.8.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
     "express": "^5.2.1"
   }
 }
