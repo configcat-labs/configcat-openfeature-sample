@@ -1,0 +1,53 @@
+// mock database
+
+const users = [
+	{
+		id: 1,
+		email: "user1@example.com",
+		password: "password",
+	},
+];
+
+const models = [
+	{
+		name: "GPT 3.5 Turbo",
+		type: "standard",
+	},
+	{
+		name: "Claude Haiku",
+		type: "standard",
+	},
+	{
+		name: "Llama 2 7B",
+		type: "standard",
+	},
+	{
+		name: "GPT-4o",
+		type: "pro",
+	},
+	{
+		name: "Claude Sonnet 3.5",
+		type: "pro",
+	},
+	{
+		name: "Llama 3.1 405B",
+		type: "pro",
+	},
+];
+
+const db = {
+	getUser(id) {
+		return this.getUsers().find((user) => user.id === id);
+	},
+	getModels(modelType) {
+		let results = [];
+		models.forEach((model) => {
+			if (model.type === modelType) {
+				results.push(model);
+			}
+		});
+		return results;
+	},
+};
+
+export default db;

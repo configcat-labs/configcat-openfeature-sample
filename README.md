@@ -1,47 +1,79 @@
-# PDF Extractor
+# ConfigCat OpenFeature Sample App
 
-This repository contains a PDF extractor app for demonstrating how [ConfigCat](https://configcat.com) and OpenFeature can be used together. In the article, the fictional company, PD-EF Corp, uses feature flags to test newer AI models by releasing them for employees only.
+A simple Express API for demonstrating how [ConfigCat](https://configcat.com) and OpenFeature can be used together. When the feature flag evaluates to true, a list of pro-AI models is returned, and a standard list of AI models otherwise.
 
-![standard-ai-models](https://github.com/user-attachments/assets/60961326-b271-4da5-bb63-60184b72533b)
+```bash
+cURL http://localhost:3000/models -H "x-user-email: tom@whisker.co" | jq
+
+[
+  {
+    "name": "GPT 3.5 Turbo",
+    "type": "standard"
+  },
+  {
+    "name": "Claude Haiku",
+    "type": "standard"
+  },
+  {
+    "name": "Llama 2 7B",
+    "type": "standard"
+  },
+  {
+    "name": "GPT-4o",
+    "type": "pro"
+  },
+  {
+    "name": "Claude Sonnet 3.5",
+    "type": "pro"
+  },
+  {
+    "name": "Llama 3.1 405B",
+    "type": "pro"
+  }
+]
+```
 
 ## Build & Run
 
 ### Prerequisites
+
 - Node v18+
 - Basic understanding of Node.js and Express
 
-1. Clone the repository:
-    - Click the green "Code" button on the repository's page and copy the URL in the text field.
-    - Paste and run the following in your terminal: `git clone https://github.com/configcat-labs/configcat-openfeature-sample.git`.
-2. Install the dependencies for the backend and frontend:
-```
-cd configcat-openfeature-sample/backend
-npm install
+1. Clone this repository and install the dependencies:
 
-cd configcat-openfeature-sample/frontend
+```bash
 npm install
 ```
-3. Open `/backend/index.js` and enter your ConfigCat SDK key in the `/models` route callback function.
 
-4. Run the backend:
-```
-cd backend
-npm start
-```
+2. Run the app:
 
-5. Run the frontend:
-```
-cd frontend
+```bash
 npm run dev
 ```
 
-6. Sign up with an email ending in `@pf-efcorp.com`, then sign in.
+3. Add your [ConfigCat SDK Key](https://app.configcat/sdkkey) to `index.js`;
 
-![pro-models](https://github.com/user-attachments/assets/b25593b9-0749-4583-a969-a29a7749a766)
+4. Make a get request with the user email you're targeting to see a list of pro-AI models:
 
-7. Sign up with an email that doesn't end in `@pd-efcorp.com`, then sign in.
+```bash
+cURL http://localhost:3000/models -H "x-user-email: tom@whisker.co" | jq
 
-![standard-models](https://github.com/user-attachments/assets/dad835dc-5f94-4542-af9b-412f18063f1c)
+[
+  {
+    "name": "GPT-4o",
+    "type": "pro"
+  },
+  {
+    "name": "Claude Sonnet 3.5",
+    "type": "pro"
+  },
+  {
+    "name": "Llama 3.1 405B",
+    "type": "pro"
+  }
+]
+```
 
 ## Learn more
 
@@ -56,9 +88,10 @@ You can also explore other code samples for various languages, frameworks, and t
 
 Keep up with ConfigCat on [X](https://x.com/configcat), [Facebook](https://www.facebook.com/configcat), [LinkedIn](https://www.linkedin.com/company/configcat/), and [GitHub](https://github.com/configcat).
 
-## Author
+## Authors
 
-[Zayyad Muhammad Sani](https://github.com/Z-MS)
+[Zayyad Muhammad Sani](https://github.com/Z-MS)   
+[Chavez Harris](https://github.com/codedbychavez)
 
 ## Contributions
 
