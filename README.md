@@ -1,6 +1,6 @@
 # ConfigCat OpenFeature Sample App
 
-A simple Express API for demonstrating how [ConfigCat](https://configcat.com) and OpenFeature can be used together. When the feature flag evaluates to true, a list of pro-AI models are returned, and a standard list of AI models otherwise.
+A simple Express API for demonstrating how [ConfigCat](https://configcat.com) and OpenFeature can be used together. When the feature flag evaluates to true, a list of pro-AI models is returned, and a standard list of AI models otherwise.
 
 ```bash
 cURL http://localhost:3000/models -H "x-user-email: tom@whisker.co" | jq
@@ -46,7 +46,7 @@ cURL http://localhost:3000/models -H "x-user-email: tom@whisker.co" | jq
 npm install
 ```
 
-2. Run the app
+2. Run the app:
 
 ```bash
 npm run dev
@@ -54,7 +54,7 @@ npm run dev
 
 3. Add your [ConfigCat SDK Key](https://app.configcat/sdkkey) to `index.js`;
 
-4. Make a get request with the user email you're targeting to see a list of pro-AI models.
+4. Make a get request with the user email you're targeting to see a list of pro-AI models:
 
 ```bash
 cURL http://localhost:3000/models -H "x-user-email: tom@whisker.co" | jq
